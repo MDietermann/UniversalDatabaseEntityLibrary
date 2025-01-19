@@ -72,8 +72,8 @@ public class UdeFactory {
     /// </summary>
     /// <param name="searchParameters">The search parameters to use when retrieving the entity.</param>
     /// <returns>The entity retrieved from the database.</returns>
-    public UniversalEntity? GetEntity(SearchParameters searchParameters) => this
-        .DbHandler[key: this.DatabaseType].GetEntity(factory: this, searchParameters: searchParameters);
+    public UniversalEntity? GetEntity(SearchParameters searchParameters) 
+        => this.DbHandler[key: this.DatabaseType].GetEntity(factory: this, searchParameters: searchParameters)!.Result;
 
     /// <summary>
     ///     Get a list of entities from the database.

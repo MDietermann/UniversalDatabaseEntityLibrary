@@ -12,4 +12,6 @@ public class UniversalEntity(List<DynamicProperty<object>> entityProperties) {
             this.EntityProperties.FirstOrDefault(predicate: x => x.GetKey() == propertyName);
         property?.SetValue(value: propertyValue);
     }
+    
+    public override string ToString() => string.Join(separator: ", ", values: this.EntityProperties);
 }
