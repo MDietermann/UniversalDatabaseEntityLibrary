@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalDatabaseEntity", "UniversalDatabaseEntity\UniversalDatabaseEntity.csproj", "{018ED5AD-95E8-473C-B196-97911661D1D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLib", "TestLib\TestLib.csproj", "{E0D88161-6DA2-4FD2-8ACE-4E3BC9E17B90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{018ED5AD-95E8-473C-B196-97911661D1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{018ED5AD-95E8-473C-B196-97911661D1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{018ED5AD-95E8-473C-B196-97911661D1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D88161-6DA2-4FD2-8ACE-4E3BC9E17B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D88161-6DA2-4FD2-8ACE-4E3BC9E17B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D88161-6DA2-4FD2-8ACE-4E3BC9E17B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D88161-6DA2-4FD2-8ACE-4E3BC9E17B90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
