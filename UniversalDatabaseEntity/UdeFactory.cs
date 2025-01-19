@@ -72,7 +72,7 @@ public class UdeFactory {
     /// </summary>
     /// <param name="searchParameters">The search parameters to use when retrieving the entity.</param>
     /// <returns>The entity retrieved from the database.</returns>
-    public UniversalEntity? GetEntity(SearchParameters searchParameters) 
+    public UniversalEntity? GetEntity(SearchParameters searchParameters)
         => this.DbHandler[key: this.DatabaseType].GetEntity(factory: this, searchParameters: searchParameters)!.Result;
 
     /// <summary>
@@ -80,8 +80,8 @@ public class UdeFactory {
     /// </summary>
     /// <param name="searchParameters">The search parameters to use when retrieving the entities.</param>
     /// <returns>A list of entities retrieved from the database.</returns>
-    public List<UniversalEntity> GetEntities(SearchParameters searchParameters) => this
-        .DbHandler[key: this.DatabaseType].GetEntities(factory: this, searchParameters: searchParameters);
+    public List<UniversalEntity>? GetEntities(SearchParameters searchParameters) => this
+        .DbHandler[key: this.DatabaseType].GetEntities(factory: this, searchParameters: searchParameters).Result;
 
     /// <summary>
     ///     Add an entity to the database.
