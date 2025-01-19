@@ -22,6 +22,8 @@ public class MySqlHandler : IDbHandler {
             string query =
                 $"SELECT * FROM {searchParameters.TableName} WHERE ";
 
+            if (searchParameters.Parameters == null) return null;
+            
             // Build the WHERE clause of the query
             for ( int index = 0; index < searchParameters.Parameters.Count; index++ ) {
                 DynamicProperty<object> parameter = searchParameters.Parameters[index: index];
@@ -130,15 +132,55 @@ public class MySqlHandler : IDbHandler {
         }
     }
 
-    public void AddEntity(UdeFactory factory, UniversalEntity entity) {
+    public async Task AddEntity(UdeFactory factory, UniversalEntity entity, string tableName) {
+        await this.Connect(factory: factory);
+
+        try {
+            string query = $"INSERT INTO {tableName} (";
+            for ( int index = 0; index < entity.GetEntityProperties().Count; index++ ) {
+                DynamicProperty<object> property = entity.GetEntityProperties()[index: index];
+                query += $"{property.GetKey()}";
+                if ( index < entity.GetEntityProperties().Count - 1 ) {
+                    query += ", ";
+                }
+            }
+
+            query += ") VALUES (";
+            for ( int index = 0; index < entity.GetEntityProperties().Count; index++ ) {
+                DynamicProperty<object> property = entity.GetEntityProperties()[index: index];
+                query += $"@value{index}";
+                if ( index < entity.GetEntityProperties().Count - 1 ) {
+                    query += ", ";
+                }
+            }
+
+            query += ");";
+            await using MySqlCommand command = new MySqlCommand(
+                commandText: query,
+                connection: this._connection
+            );
+
+            for ( int index = 0; index < entity.GetEntityProperties().Count; index++ ) {
+                DynamicProperty<object> property = entity.GetEntityProperties()[index: index];
+                command.Parameters.AddWithValue(
+                    parameterName: $"value{index}",
+                    value: property.GetValue()
+                );
+            }
+
+            await command.ExecuteNonQueryAsync();
+            await this._connection!.CloseAsync();
+        }
+        catch ( Exception exception ) {
+            Console.Error.WriteLineAsync(value: exception.Message).GetAwaiter().GetResult();
+        }
+    }
+
+    public Task UpdateEntity(UdeFactory factory, UniversalEntity entity) {
         throw new NotImplementedException();
     }
 
-    public void UpdateEntity(UdeFactory factory, UniversalEntity entity) {
-        throw new NotImplementedException();
-    }
-
-    public void DeleteEntity(UdeFactory factory, UniversalEntity entity) {
+    public Task DeleteEntity(UdeFactory factory, UniversalEntity entity) {
         throw new NotImplementedException();
     }
 

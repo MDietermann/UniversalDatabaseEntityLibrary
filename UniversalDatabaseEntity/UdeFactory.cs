@@ -87,8 +87,9 @@ public class UdeFactory {
     ///     Add an entity to the database.
     /// </summary>
     /// <param name="entity">The entity to add to the database.</param>
-    public void AddEntity(UniversalEntity entity) {
-        this.DbHandler[key: this.DatabaseType].AddEntity(factory: this, entity: entity);
+    /// <param name="tableName">The Table, where the entity will be added</param>
+    public void AddEntity(UniversalEntity entity, string tableName) {
+        this.DbHandler[key: this.DatabaseType].AddEntity(factory: this, entity: entity, tableName: tableName);
     }
 
     /// <summary>
