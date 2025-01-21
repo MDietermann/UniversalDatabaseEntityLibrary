@@ -198,19 +198,19 @@
     ]
   },
   "packageFolders": {
-    "/home/marvind/.nuget/packages/": {}
+    "C:\\Users\\marvin.dietermann\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marvind/Git/UniversalDatabaseEntityLibrary/UniversalDatabaseEntity/UniversalDatabaseEntity.csproj",
+      "projectUniqueName": "C:\\Users\\marvin.dietermann\\source\\UniversalDatabaseEntityLibrary\\UniversalDatabaseEntity\\UniversalDatabaseEntity.csproj",
       "projectName": "UniversalDatabaseEntity",
-      "projectPath": "/home/marvind/Git/UniversalDatabaseEntityLibrary/UniversalDatabaseEntity/UniversalDatabaseEntity.csproj",
-      "packagesPath": "/home/marvind/.nuget/packages/",
-      "outputPath": "/home/marvind/Git/UniversalDatabaseEntityLibrary/UniversalDatabaseEntity/obj/",
+      "projectPath": "C:\\Users\\marvin.dietermann\\source\\UniversalDatabaseEntityLibrary\\UniversalDatabaseEntity\\UniversalDatabaseEntity.csproj",
+      "packagesPath": "C:\\Users\\marvin.dietermann\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marvin.dietermann\\source\\UniversalDatabaseEntityLibrary\\UniversalDatabaseEntity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/marvind/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\marvin.dietermann\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -228,6 +228,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -250,18 +255,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.10, 8.0.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\marvin.dietermann\\.dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

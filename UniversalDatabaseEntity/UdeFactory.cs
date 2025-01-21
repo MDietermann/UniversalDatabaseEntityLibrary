@@ -1,4 +1,5 @@
 ﻿using UniversalDatabaseEntity.DbHandling;
+using UniversalDatabaseEntity.DbHandling.MySql;
 
 namespace UniversalDatabaseEntity;
 
@@ -35,7 +36,7 @@ public class UdeFactory {
     /// <summary>
     ///     The type of database to connect to.
     /// </summary>
-    private DbTypeEnum DatabaseType { get; }
+    public DbTypeEnum DatabaseType { get; }
 
     /// <summary>
     ///     The server to connect to.
