@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniversalDatabaseEntity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9786d43c132be544e76782f6a3f038bc3b12ced8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a06088309b74754ba95e6bd718f08ad981c7cea")]
 [assembly: System.Reflection.AssemblyProductAttribute("UniversalDatabaseEntity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UniversalDatabaseEntity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
