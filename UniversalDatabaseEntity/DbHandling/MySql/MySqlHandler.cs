@@ -80,9 +80,8 @@ public class MySqlHandler : IDbHandler {
                 List<DynamicProperty<object>> properties = new List<DynamicProperty<object>>();
 
                 // Add each column as a dynamic property to the entity
-                for (int index = 0; index < reader.FieldCount; index++) {
+                for (int index = 0; index < reader.FieldCount; index++)
                     properties.Add(new DynamicProperty<object>(reader.GetName(index), reader.GetValue(index)));
-                }
 
                 // Add the entity to the list
                 entities.Add(new UniversalEntity(properties));
